@@ -1,0 +1,31 @@
+/* click sparks */
+.spark-bit {
+  position: fixed;
+  left: 0; top: 0;
+  width: var(--s, 5px);
+  height: var(--s, 5px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  background: currentColor; /* visible! */
+  filter: drop-shadow(0 0 6px currentColor) drop-shadow(0 0 12px currentColor);
+  mix-blend-mode: screen;
+  transform: translate(var(--x), var(--y)) scale(.9);
+  animation: spark-move var(--dur, 520ms) cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+@keyframes spark-move {
+  60% {
+    opacity: .9;
+    transform: translate(calc(var(--x) + var(--dx)), calc(var(--y) + var(--dy))) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--x) + var(--dx)*1.2), calc(var(--y) + var(--dy)*1.2)) scale(.2);
+  }
+}
+
+/* respect reduced motion unless you opt-in */
+@media (prefers-reduced-motion: reduce) {
+  :root:not([data-allow-effects="true"]) .spark-bit { display: none !important; }
+}

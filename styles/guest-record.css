@@ -1,0 +1,86 @@
+/* ===== Controls Bar (Record / Stop / Play / Save) ===== */
+.row {
+  max-width: var(--maxw);
+  margin: 1rem auto 0;
+  padding: 0 .5rem;
+  display: flex;
+  gap: .6rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Base button — BLUE by default for all */
+.row > button {
+  appearance: none;
+  border: 1px solid var(--line-06);
+  border-radius: 12px;
+  padding: .72rem 1.1rem;
+  font: 800 0.95rem/1 Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  letter-spacing: .2px;
+  color: #fff;
+  background: linear-gradient(135deg, #3b82f6, #60a5fa); /* blue -> lighter blue */
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  transition:
+    transform .12s ease,
+    filter .15s ease,
+    box-shadow .15s ease,
+    background .3s ease;
+}
+
+.row > button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.06);
+}
+
+.row > button:active {
+  transform: translateY(0) scale(.98);
+}
+
+.row > button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px var(--secondary-glow-35),
+    0 0 18px var(--primary-glow-35),
+    var(--card-shadow);
+}
+
+/* Disabled state */
+.row > button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+  transform: none;
+  filter: none;
+}
+
+/* ===== Active colors (JS adds .is-active) ===== */
+#rec.is-active {
+  color: #000;
+  background: linear-gradient(135deg, #ef4444, #f87171); /* red */
+  box-shadow: 0 8px 24px rgba(0,0,0,.35), 0 0 18px rgba(239,68,68,.5);
+}
+
+#stop.is-active {
+  color: #000;
+  background: linear-gradient(135deg, #a855f7, #c084fc); /* purple */
+  box-shadow: 0 8px 24px rgba(0,0,0,.35), 0 0 18px rgba(168,85,247,.45);
+}
+
+#play.is-active {
+  color: #000;
+  background: linear-gradient(135deg, #22c55e, #86efac); /* green */
+  box-shadow: 0 8px 24px rgba(0,0,0,.35), 0 0 18px rgba(34,197,94,.45);
+}
+
+#save.is-active {
+  color: #000;
+  background: linear-gradient(135deg, #93c5fd, #bfdbfe); /* baby blue */
+  box-shadow: 0 8px 24px rgba(0,0,0,.35), 0 0 16px rgba(147,197,253,.45);
+}
+
+/* Reduced motion friendly */
+@media (prefers-reduced-motion: reduce) {
+  .row > button { transition: none; }
+}

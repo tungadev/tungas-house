@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 — Page Not Found</title>
+
+  <!-- Your compiled CSS (uses the variables and components you shared) -->
+  <link rel="stylesheet" href="styles/styles.css" />
+  <meta name="robots" content="noindex" />
+</head>
+<body>
+  <header>
+    <div class="header-nav">
+      <nav aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/#projects">Projects</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero-style 404 using your header-bio gradient H1 -->
+    <section class="header-bio" aria-labelledby="nf-title">
+      <h1 id="nf-title">404</h1>
+      <p>That page drifted off into neon space.</p>
+    </section>
+
+    <!-- Helpful actions in your glassy card style -->
+    <section class="section" aria-labelledby="nf-help">
+      <h2 id="nf-help">Let’s get you back on track</h2>
+      <p>Here are a few things you can try:</p>
+      <ul>
+        <li><a href="/">Go to the homepage</a></li>
+        <li><a href="/#projects">Browse recent projects</a></li>
+        <li><a href="/#contact">Report this broken link</a></li>
+      </ul>
+    </section>
+
+    <!-- Optional: a small “recent/related” card -->
+    <section class="section" aria-labelledby="nf-links">
+      <h2 id="nf-links">Popular destinations</h2>
+      <p>
+        <a href="/#music">🎹 Music &amp; Visualizer</a> ·
+        <a href="/#blog">📝 Blog</a> ·
+        <a href="/#tools">🧰 Tools</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> — All synths still humming.</small>
+  </footer>
+
+  <!-- Theme toggle button (styled by your CSS) -->
+  <button id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">⚡</button>
+
+  <script>
+    // Year stamp
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lightweight theme cycler (uses 5 themes from your palette).
+    // If your site already initializes themes globally, this will gracefully coexist.
+    (function () {
+      const THEMES = ['theme-inkwell','theme-oxide','theme-aurora','theme-mocha','theme-blush'];
+      const key = 'theme-ix';
+      const btn = document.getElementById('theme-toggle');
+      if (!btn) return;
+
+      let ix = +localStorage.getItem(key) || 0;
+      apply(ix);
+
+      btn.addEventListener('click', () => {
+        ix = (ix + 1) % THEMES.length;
+        localStorage.setItem(key, ix);
+        apply(ix, true);
+      });
+
+      function apply(i, glitch) {
+        document.body.classList.remove(...THEMES);
+        document.body.classList.add(THEMES[i]);
+        if (glitch) {
+          document.body.classList.add('theme-glitch');
+          setTimeout(() => document.body.classList.remove('theme-glitch'), 520);
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

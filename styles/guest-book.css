@@ -1,0 +1,20 @@
+/* Guestbook (Cbox) */
+.guestbook-embed { margin-top: .5rem; }
+
+.guestbook-embed iframe#cbox {
+  width: 80%;
+  min-height: clamp(420px, 60vh, 760px);
+  border: 1px solid var(--line-06);
+  border-radius: var(--radius);
+  background: var(--surface-75);
+  box-shadow: var(--card-shadow);
+  display: block;
+  margin: 0 auto;
+}
+
+#guestbook .guestbook-fallback {
+  margin-top: .5rem;
+  border-top: 1px solid var(--line-06);
+  padding-top: .5rem;
+  color: var(--muted);
+}
