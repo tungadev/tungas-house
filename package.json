@@ -1,0 +1,15 @@
+{
+  "name": "tungas-house",
+  "version": "1.0.0",
+  "description": "Welcome not only to my page, but also to my github. Thanks for stoping by.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@tungadev:tungadev/tungas-house.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
