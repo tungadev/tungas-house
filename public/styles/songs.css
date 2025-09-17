@@ -1,16 +1,16 @@
 body {
   background-image: url("../images/black-hole-gif-7.gif");
   background-attachment: fixed;
-  background-size: cover
+  background-size: cover;
 }
 
-.songs-container {
+.main-container {
   display: grid;
   grid-template-column: 100px, auto, 100px;
   grid-template-row: 100px, auto, 100px;
-  grid-template-areas: 
-  ". favorite-songs ." 
-  ". my-songs ."
+  grid-template-areas:
+    ". favorite-songs ."
+    ". my-songs .";
 }
 
 #favorite-songs {
@@ -18,7 +18,7 @@ body {
 }
 
 #my-songs {
-  grid-area: my-songs
+  grid-area: my-songs;
 }
 
 .songs-section {
@@ -28,4 +28,5 @@ body {
   border: solid 10px rgb(51, 5, 69);
   background-color: rgb(163, 132, 216);
   margin: 10px;
+  padding: 10px;
 }
