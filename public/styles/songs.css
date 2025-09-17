@@ -1,5 +1,31 @@
 body {
-  background-image: url("/images/fuck_you_swirly_background.gif");
+  background-image: url("../images/black-hole-gif-7.gif");
   background-attachment: fixed;
-  background-size: fit;
+  background-size: cover
+}
+
+.songs-container {
+  display: grid;
+  grid-template-column: 100px, auto, 100px;
+  grid-template-row: 100px, auto, 100px;
+  grid-template-areas: 
+  ". favorite-songs ." 
+  ". my-songs ."
+}
+
+#favorite-songs {
+  grid-area: favorite-songs;
+}
+
+#my-songs {
+  grid-area: my-songs
+}
+
+.songs-section {
+  border-radius: 10px;
+  color: white;
+  display: grid;
+  border: solid 10px rgb(51, 5, 69);
+  background-color: rgb(163, 132, 216);
+  margin: 10px;
 }
