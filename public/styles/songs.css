@@ -1,7 +1,7 @@
 body {
-  /* background-image: url("../images/fuck_you_swirly_background.gif");
+  background-image: url("../images/space-stars.gif");
   background-attachment: fixed;
-  background-size: cover; */
+  background-size: fill;
   background-color: black;
   max-width: 1200px;
   margin: 0 auto;
@@ -42,15 +42,15 @@ a {
 }
 
 .left-column-container:hover {
-  border: solid 4px white;
+  border: solid 3px white;
 }
 
 .right-column-container:hover {
-  border: solid 4px white;
+  border: solid 3px white;
 }
 
 .songs-section:hover {
-  border: solid 4px white;
+  border: solid 3px white;
 }
 
 p:hover {
