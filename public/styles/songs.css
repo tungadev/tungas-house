@@ -1,16 +1,71 @@
 body {
-  background-image: url("../images/black-hole-gif-7.gif");
+  /* background-image: url("../images/fuck_you_swirly_background.gif");
   background-attachment: fixed;
-  background-size: cover;
+  background-size: cover; */
+  background-color: black;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #ffffff;
+  font: 1.3rem Inconsolata, monospace;
+}
+
+a {
+  color: inherit;
+}
+
+.parent-container {
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 300px 600px 300px;
+  grid-template-row: 100px, auto, 100px;
+  grid-template-areas: "left-column-container main-container right-column-container";
 }
 
 .main-container {
   display: grid;
-  grid-template-column: 100px, auto, 100px;
-  grid-template-row: 100px, auto, 100px;
+  grid-area: main-container;
+  /* grid-template-row: auto; */
   grid-template-areas:
-    ". favorite-songs ."
-    ". my-songs .";
+    "favorite-songs"
+    "my-songs";
+}
+
+.left-column-container {
+  display: grid;
+  grid-area: left-column-container;
+  border: solid 2px white;
+  background-image: url("../images/song-section-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.85);
+  background-blend-mode: soft-light;
+}
+
+.left-column-container:hover {
+  border: solid 4px white;
+}
+
+.right-column-container:hover {
+  border: solid 4px white;
+}
+
+.songs-section:hover {
+  border: solid 4px white;
+}
+
+p:hover {
+  font-size: 21px;
+}
+
+.right-column-container {
+  display: grid;
+  grid-area: right-column-container;
+  border: solid 2px white;
+  background-image: url("../images/song-section-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.85);
+  background-blend-mode: soft-light;
 }
 
 #favorite-songs {
@@ -23,10 +78,25 @@ body {
 
 .songs-section {
   border-radius: 10px;
-  color: white;
   display: grid;
-  border: solid 10px rgb(51, 5, 69);
-  background-color: rgb(163, 132, 216);
+  border: solid 2px rgb(255, 255, 255);
+  background-image: url("../images/song-section-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.85);
+
+  background-blend-mode: soft-light;
+
+  margin: 10px;
+  padding: 10px;
+}
+
+.songs-section > p {
+  border-radius: 10px;
+  border: solid 2px rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.801);
+  background-attachment: fixed;
+  background-size: cover;
   margin: 10px;
   padding: 10px;
 }
