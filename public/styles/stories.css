@@ -1,0 +1,105 @@
+body {
+  background-image: url("../images/green-forest-woods-trails-pathway-sun-rays-glade-scenery-2560x1440-5696_pixelated.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #000000;
+  font: 1.3rem Inconsolata, monospace;
+}
+
+
+a {
+  color: inherit;
+}
+
+.parent-container {
+  margin-top: 200px;
+  display: grid;
+  grid-template-columns: 300px 600px 300px;
+  grid-template-row: 100px, auto, 100px;
+  grid-template-areas: ". main-container .";
+}
+
+.main-container {
+  display: grid;
+  grid-area: main-container;
+  /* grid-template-row: auto; */
+  grid-template-areas:
+    "favorite-songs"
+    "favorite-books"
+    "my-songs";
+}
+
+.left-column-container {
+  display: grid;
+  grid-area: left-column-container;
+  border: solid 2px white;
+  background-image: url("../images/song-section-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.85);
+  background-blend-mode: soft-light;
+}
+
+.left-column-container:hover {
+  border: solid 3px white;
+}
+
+.right-column-container:hover {
+  border: solid 3px white;
+}
+
+.songs-section:hover {
+  border: solid 3px white;
+}
+
+p:hover {
+  font-size: 21px;
+}
+
+.right-column-container {
+  display: grid;
+  grid-area: right-column-container;
+  border: solid 2px white;
+  background-image: url("../images/song-section-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.85);
+  background-blend-mode: soft-light;
+}
+
+#favorite-songs {
+  grid-area: favorite-songs;
+}
+
+#favorite-books {
+  grid-area: favorite-books;
+}
+
+#my-songs {
+  grid-area: my-songs;
+}
+
+.songs-section {
+  border-radius: 10px;
+  display: grid;
+  border: solid 2px rgb(255, 255, 255);
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.277);
+
+  background-blend-mode: soft-light;
+
+  margin: 10px;
+  padding: 10px;
+}
+
+.songs-section > p {
+  border-radius: 10px;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 10px;
+  padding: 10px;
+}
