@@ -9,7 +9,6 @@ body {
   font: 1.3rem Inconsolata, monospace;
 }
 
-
 a {
   color: inherit;
 }
@@ -20,6 +19,7 @@ a {
   grid-template-columns: 300px 600px 300px;
   grid-template-row: 100px, auto, 100px;
   grid-template-areas: ". main-container .";
+  z-index: 999;
 }
 
 .main-container {
@@ -86,14 +86,13 @@ p:hover {
   border-radius: 10px;
   display: grid;
   border: solid 2px rgb(255, 255, 255);
-  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(255, 255, 255, 0.277);
-
-  background-blend-mode: soft-light;
+  background-image: url("../images/page.png");
 
   margin: 10px;
   padding: 10px;
+  z-index: 999;
 }
 
 .songs-section > p {

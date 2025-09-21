@@ -39,6 +39,7 @@ a {
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.85);
   background-blend-mode: soft-light;
+  z-index: 999;
 }
 
 .left-column-container:hover {
@@ -66,6 +67,7 @@ p:hover {
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.85);
   background-blend-mode: soft-light;
+  z-index: 999;
 }
 
 #favorite-songs {
@@ -89,6 +91,7 @@ p:hover {
 
   margin: 10px;
   padding: 10px;
+  z-index: 999;
 }
 
 .songs-section > p {

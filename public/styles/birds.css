@@ -1,0 +1,25 @@
+@keyframes fly {
+  0% {
+    transform: translateX(-400px) scale(-1, 1);
+  }
+  /* 50% {
+    transform: translateX(150vw) scale(-1, 1);
+  } fly across */
+  100% {
+    transform: translateX(200vw) scale(-1, 1);
+  } /* stay put */
+}
+
+#birds-gif {
+  position: fixed;
+  top: 200px;
+  left: -5px;
+  z-index: 0;
+  pointer-events: none;
+  transform: scale(-1, 1);
+  max-height: 200px;
+  pointer-events: auto; /* allow clicks */
+
+  /* 10s flight + 20s pause = 30s total loop */
+  animation: fly 40s linear infinite;
+}
