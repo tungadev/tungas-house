@@ -6,13 +6,13 @@
     transform: translateX(150vw) scale(-1, 1);
   } fly across */
   100% {
-    transform: translateX(200vw) scale(-1, 1);
+    transform: translateX(150vw) scale(-1, 1);
   } /* stay put */
 }
 
 #birds-gif {
   position: fixed;
-  top: 200px;
+  top: 75px;
   left: -5px;
   z-index: 0;
   pointer-events: none;
@@ -21,5 +21,5 @@
   pointer-events: auto; /* allow clicks */
 
   /* 10s flight + 20s pause = 30s total loop */
-  animation: fly 40s linear infinite;
+  animation: fly 30s linear infinite;
 }
