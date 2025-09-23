@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" data-allow-effects="true">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tunga's Blog: "Neocities Coding Heaven"</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../images/cute-kitty-cat-head-cartoon-element-free-png.png" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="../styles/blog.css" />
+    <link rel="stylesheet" href="../styles/spark.css" />
+</head>
+
+<body class="theme-uv">
+    <header>
+        <div class="header-nav">
+            <nav>
+                <a href="../index.html">Home</a>
+                <!-- <a href="#stories-section">Stories</a>
+              <a href="#songs-section">Songs</a>
+              <a href="#blogs-section">Blog</a>
+              <a href="#dev-section">Dev stuff</a>
+              <a href="#friend-section">Friends</a> -->
+            </nav>
+        </div>
+        <div class="header-bio">
+            <h1>Neocities Coding Heaven</h1>
+            <p>Feelin' lazy.</p>
+            <button id="theme-toggle" aria-label="Toggle theme" title="Change theme">✦</button>
+        </div>
+    </header>
+
+    <main>
+        <b>Flash forward.</b>
+        <br /><br />
+        The year is 2025. Beans are $2.50 a pound, it's fucking <i>hot</i>, and AI summarizes articles written
+        by AI.
+        <br /><br />
+        What's the good news? You can develop your personal site locally with auto-refreshing tabs on file saves and
+        deploy to Neocities when you push to Github. Hallelujah!
+        <br /><br />
+        Here's how:
+        <br /><br />
+        <h2>Auto-refreshing your browser when you save a file</h2>
+        If you already have Node installed on your machine, skip step 1.
+        <br /><br />
+        <b>1.</b> Go here and install Node for your OS: <a target="_blank"
+            href="https://nodejs.org/en/download">https://nodejs.org/en/download</a>
+        <br /><br />
+        <b>2.</b> Install <a href="https://browsersync.io/">browser-sync</a> by opening your terminal of choice and
+        running:
+        <br />
+        <code style="background-color: rgba(128, 128, 128, 0.432); padding: 5px;">npx install -g browser-sync</code>
+        <br /><br />
+        Skip step 3 if you are not intending to set up deployment to Neocities via Github (I'd recommend setting
+        this
+        up).
+        <br /><br />
+        <b>3.</b> Move all of the files used in your website into a folder called "public."
+        <br /><br />
+        <b>4.</b> To test, "cd" into your project's root folder in your terminal and run:
+        <br />
+        <code style="background-color: rgba(128, 128, 128, 0.432); padding: 5px;">
+            npx browser-sync start --server "public" --files
+        "public/*.html"
+        </code>
+        <br /><br />
+        A breakdown of the command:
+        <br />
+        - You are first telling npx to run the browser-sync package.
+        <br />
+        - Your server is reading from the "public" directory, or whatever directory you are hosting your files in
+        (change
+        accordingly).
+        <br />
+        - The files which, when saved, will trigger a tab refresh. This will need to be modified for your specific
+        project. For example, I use:
+        <br />
+        <code
+            style="background-color: rgba(128, 128, 128, 0.432); padding: 5px;">--files "public/*.html,public/blogs/*.html,public/stories/*.html,public/styles/*.css,public/js/*.js"</code>
+        <br /><br />
+        <h2>Deploying Code to Neocities when Pushing to Github Repository</h2>
+        This section assumes you have a Github account and know how to create a repository. If not, please reference <a
+            href="https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories">this
+            article</a>.
+        <br /><br />
+        <b>1.</b> Follow this article: <a href="https://github.com/marketplace/actions/deploy-to-neocities">Deploy
+            to Neocities Github Action</a>
+        <br /><br />
+        This article will teach you to:
+        <br />
+        - Create a Github action
+        <br />
+        - Create an environment variable using your Neocities API key
+        <br /><br />
+        I had to modify my code a little bit. I would recommend copying this Github action instead of using what's in
+        the article. Modify what you need:
+        <div style="background-color: rgba(128, 128, 128, 0.432); padding: 5px;;">
+            <pre><code>name: Deploy to neocities
+
+on:
+  push:
+    branches: ["main"]
+
+concurrency:
+  group: deploy-to-neocities
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to neocities
+        uses: bcomnes/deploy-to-neocities@v3
+        with:
+          api_key: ${{ secrets.NEOCITIES_API_TOKEN }}
+          dist_dir: public
+          cleanup: false
+          neocities_supporter: true
+          preview_before_deploy: true
+</code></pre>
+        </div>
+        <br />
+        One thing you may need to modify is the "branches" section. The branch of the repository I wanted pushed to
+        Neocities was "main."
+        <br /><br />
+        <b>2.</b> After you're done, and assuming you've moved all of your website's files to the "public" directory,
+        pull from your repository.
+        <br /><br />
+        <b>3.</b> Make a change to your codebase in "public" and push it to your repository. Go to your Neocities page
+        and make sure the change is reflected on your site. It might take a minute, so refresh. If it isn't updated
+        after
+        two minutes, begin troubleshooting.
+        <br /><br />
+        <h2>Done!</h2>
+        You should now be able to both develop locally with hot reloading and push to your production website via
+        Github! If you notice anything that needs to be updated in this blog, please shoot me an email at
+        tungadev@protonmail.com or simply leave a comment in the guestbook on the home page.
+        <br /><br />
+        <h2>(Bonus)</h2>
+        If you're familiar with aliases using bash, here's a good alias I've been using via my git bash terminal:
+        <code>alias tungas-house='cd "/c/Users/tunga/dev/neocities/tungas-house" && code . && npx browser-sync start --server "public"
+        --files "public/*.html,public/blogs/*.html,public/stories/*.html,public/styles/*.css,public/js/*.js"'</code>
+        <br /><br />
+        This alias takes you to your local directory, opens it in VS Code, and launches a live instances of it using
+        browser-sync. I literally just type in "tungas-house", hit enter, and away I go.
+        <br /><br />
+        Some helpful links:
+        <br /><br />
+        <a href="https://git-scm.com/downloads">Download git bash</a>
+        <br />
+        <a href="https://zbic.in/2019/12/06/Git-Bash-aliases-for-lazy-devs-including-myself/">Aliases in .bashrc</a>
+
+
+    </main>
+
+    <footer>
+        <p>&copy 2025. Our attention has been monetized. <a href="https://www.humanetech.com/social-media-society">Learn
+                more here</a>.</p>
+        <p>Contact: tungadev@protonmail.com</p>
+    </footer>
+    <script src="../js/typewriter.js"></script>
+    <script src="../js/spark.js"></script>
+    <script src="../js/theme-toggle.js"></script>
+
+</body>
+
+</html>
