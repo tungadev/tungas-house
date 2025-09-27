@@ -1,0 +1,81 @@
+:root {
+  --door-time: 20s;
+} /* matches your 5s move */
+
+body {
+  background-color: black;
+  background-image: url("../images/gif.gif");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* move the WRAPPER so the glow comes along */
+@keyframes door-move {
+  0% {
+    transform: translateX(-400px);
+  }
+  100% {
+    transform: translateX(calc(50vw - 50%));
+  } /* center wrapper */
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.25);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.7;
+  }
+}
+
+/* wrapper controls position, animation, and stacking context */
+.door-wrap {
+  position: fixed;
+  /* match your vertical placement (you had 200px on .door and 75px on wrap).
+     pick one; here we use 200px like the image had. */
+  top: 200px;
+  left: 0;
+  z-index: 0; /* base layer for this stack */
+  animation: door-move var(--door-time) ease-out forwards;
+  isolation: isolate; /* keep z-index layering contained */
+}
+
+/* pulsing red glow BEHIND the image */
+.door-wrap::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150px; /* your size */
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 0.55) 0%,
+    rgba(255, 0, 0, 0.35) 40%,
+    rgba(255, 0, 0, 0) 70%
+  );
+  filter: blur(12px);
+  opacity: 0; /* invisible until pulse anim kicks in */
+  z-index: 0; /* stays behind the image (which is z-index:1) */
+
+  /* start pulsing after the door finishes moving */
+  animation: pulse 5s ease-in-out infinite;
+  animation-delay: var(--door-time); /* = 5s */
+}
+
+/* the image itself */
+.door {
+  position: relative; /* create a layer inside the wrapper */
+  z-index: 1; /* ABOVE the glow */
+  max-height: 300px;
+  transform: scale(-1, 1); /* keep your mirror */
+  display: block;
+  pointer-events: auto;
+}

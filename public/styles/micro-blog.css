@@ -3,7 +3,6 @@
   background: linear-gradient(180deg, var(--surface-75), var(--surface-55));
   border: 1px solid var(--line-06);
   border-radius: 14px;
-  padding: .75rem .9rem .6rem;
   box-shadow: var(--card-shadow);
   backdrop-filter: blur(6px);
 }
@@ -12,36 +11,42 @@
 #micro-blog .micro-blog-header {
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
-  font-style: italic;                 /* keep your vibe */
+  gap: 10px;
+  font-style: italic; /* keep your vibe */
   font-weight: 700;
-  font-size: .85rem;
-  letter-spacing: .04em;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
   color: var(--muted);
   text-transform: uppercase;
-  opacity: .95;
+  opacity: 0.95;
   user-select: none;
 }
 
 /* Glowy dot before the date */
 #micro-blog .micro-blog-header::before {
   content: "";
-  width: 8px; height: 8px; border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
   background: radial-gradient(circle at 30% 30%, var(--secondary), var(--cyan));
   box-shadow: 0 0 10px var(--secondary), 0 0 12px var(--cyan);
 }
 
 /* Post content */
 #micro-blog .micro-blog-content {
-  margin: .4rem 0 1rem;
+  margin: 0.4rem 0 1rem;
   font-size: 1rem;
   line-height: 1.65;
   color: var(--text);
 }
 
 /* Add subtle emphasis options */
-#micro-blog .micro-blog-content em { color: var(--muted); }
-#micro-blog .micro-blog-content strong { text-shadow: 0 0 6px var(--secondary-glow-35); }
+#micro-blog .micro-blog-content em {
+  color: var(--muted);
+}
+#micro-blog .micro-blog-content strong {
+  text-shadow: 0 0 6px var(--secondary-glow-35);
+}
 
 /* Links/hashtags feel */
 #micro-blog .micro-blog-content a {
@@ -57,21 +62,24 @@
 
 /* Pretty divider and hide the last one */
 #micro-blog hr {
-  border: 0; height: 1px;
-  margin: .25rem 0 1rem;
+  border: 0;
+  height: 1px;
+  margin: 0.25rem 0 1rem;
   background: linear-gradient(90deg, transparent, var(--line-06), transparent);
 }
-#micro-blog .micro-blog-instance hr:last-child { display: none; }
+#micro-blog .micro-blog-instance hr:last-child {
+  display: none;
+}
 
 /* Optional: card-like hover if you wrap each post (see HTML tweak below) */
 #micro-blog .micro-post {
   border-left: 3px solid transparent;
   border-radius: 10px;
-  padding: .4rem .4rem .6rem;
-  transition: background .2s ease, border-color .2s ease, transform .15s ease;
+  padding: 0.4rem 0.4rem 0.6rem;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
 }
 #micro-blog .micro-post:hover {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   border-color: var(--secondary);
   transform: translateY(-1px);
 }

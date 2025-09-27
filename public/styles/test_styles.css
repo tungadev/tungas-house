@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+/* =========================
+   S Y N T H W A V E  T H E M E
+   ========================= */
+:root {
+  --maxw: 1000px;
+  --main-maxw: 800px;
+}
+
+/* =======================
+   Base / Reset
+   ======================= */
+body {
+  line-height: 1.6;
+}
+
+/* =======================
+   Elements & Layout
+   ======================= */
+header {
+  padding: 1rem 0 2rem;
+  border-bottom: 1px solid var(--line-06);
+}
+
+.header-nav {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.header-nav nav {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.header-nav a {
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.header-bio {
+  max-width: var(--maxw);
+  margin: 60px auto 0;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.header-bio h1 {
+  margin: 0 0 10px;
+  font-size: 70px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.header-bio p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.user-sandbox {
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.container-header {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+  max-width: 700px;
+}
+
+.column-item {
+  flex: 1;
+  padding: 10px;
+  min-height: auto;
+  min-width: 100%;
+  background: linear-gradient(180deg, var(--surface-75), var(--surface-55));
+  border: 1px solid var(--line-06);
+  border-radius: var(--radius);
+  padding: 10px;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(100px);
+  margin-bottom: 10px;
+  overflow: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: var(--cyan) transparent;
+}
+
+/* Chrome / Edge / Safari */
+.column-item::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.column-item::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--cyan), var(--secondary));
+  border-radius: 999px;
+}
+
+.column-item-header {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text);
+  text-align: center;
+}
+
+#micro-blog,
+#updates {
+  height: 600px;
+  width: auto;
+}
+
+.micro-blog-header,
+.update-header {
+  /* italic */
+  font-style: italic;
+}
+
+.micro-blog-content,
+.update-content {
+  margin-bottom: 10px;
+}
+
+main {
+  max-width: var(--main-maxw);
+  padding: 10px;
+}
+
+.intro-container,
+.section {
+  background: linear-gradient(180deg, var(--surface-75), var(--surface-55));
+  border: 1px solid var(--line-06);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(6px);
+  margin-bottom: 10px;
+}
+
+.section h2 {
+  margin: 0 0 10px;
+  font-weight: 800;
+  font-size: 25px;
+  letter-spacing: 0.3px;
+  color: var(--text);
+  text-shadow: 0 0 6px var(--secondary-glow-35);
+}
+
+.section a {
+  color: var(--cyan);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.section a:hover {
+  color: var(--highlight);
+  text-shadow: var(--glow-strong);
+}
+
+footer {
+  max-width: var(--maxw);
+  margin: 20px auto 30px;
+  padding: 0 10px;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid var(--line-06);
+  padding-top: 10px;
+}
+
+/* =======================
+   Components
+   ======================= */
+
+/* Typewriter (H1 + Tagline) */
+.tw-wrap {
+  display: inline-block;
+  position: relative;
+}
+.tw-cursor {
+  display: inline-block;
+  width: 20px;
+  height: 80px;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+  background: linear-gradient(90deg, var(--secondary), var(--cyan));
+  box-shadow: 0 0 8px var(--secondary), 0 0 10px var(--cyan);
+  animation: tw-blink 1s steps(1) infinite;
+}
+
+/* Robust gradient text for H1 + typed span */
+
+/* Hide tagline until typewriter starts */
+.header-bio p {
+  visibility: hidden;
+}
+
+/* Keep cursor solid and removable */
+.header-bio h1 .tw-cursor {
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  color: initial !important;
+}
+.tw-cursor-hide {
+  animation: tw-cursor-fade 0.25s ease forwards !important;
+}
+
+/* quick glitch flash when switching themes */
+body.theme-glitch {
+  animation: theme-glitch 520ms ease-out;
+}
+
+/* Neon Visualizer */
+#viz {
+  max-width: var(--maxw);
+  margin: 15px auto 0;
+  padding: 8px 10px;
+  height: 52px;
+  display: grid;
+  grid-template-columns: repeat(32, 1fr);
+  gap: 6px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, var(--bg-accent-3), var(--bg-accent-1));
+  border: 1px solid var(--line-06);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35), 0 0 24px var(--primary-glow-35);
+}
+#viz .bar {
+  align-self: end;
+  height: 10px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, var(--cyan), var(--secondary));
+  box-shadow: 0 0 10px var(--cyan), 0 0 12px var(--secondary);
+  transition: height 70ms linear;
+}
+
+/* =======================
+   Animations
+   ======================= */
+@keyframes tw-blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes tw-cursor-fade {
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+@keyframes theme-glitch {
+  0% {
+    filter: hue-rotate(10deg) contrast(1.2) saturate(1.2);
+  }
+  50% {
+    filter: hue-rotate(-10deg) contrast(1.35) saturate(1.35);
+  }
+  100% {
+    filter: none;
+  }
+}
+
+/* =======================
+   Media Queries
+   ======================= */

@@ -38,6 +38,25 @@
   --main-maxw: 800px;
 }
 
+.theme-test {
+  --bg: #000000;
+  --surface: #000000;
+  --text: #ffffff;
+  --muted: #000000;
+  --primary: #000000;
+  --secondary: #000000;
+  --highlight: #000000;
+  --cyan: #000000;
+  --bg-accent-1: rgba(0, 0, 0, 0.18);
+  --bg-accent-2: rgba(0, 0, 0, 0.14);
+  --bg-accent-3: rgba(0, 0, 0, 0.16);
+  --surface-75: rgba(0, 0, 0, 0.75);
+  --surface-55: rgba(0, 0, 0, 0.55);
+  --line-06: rgba(0, 0, 0, 0.06);
+  --primary-glow-35: rgba(0, 0, 0, 0.35);
+  --secondary-glow-35: rgba(0, 0, 0, 0.35);
+}
+
 /* ===== Theme overrides ===== */
 .theme-inkwell {
   --bg: #0b0e1a;
