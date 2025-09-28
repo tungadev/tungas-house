@@ -15,17 +15,18 @@
 /* Post content */
 #micro-blog .micro-blog-content {
   margin: 10px;
-  font-size: 1rem;
+  font-size: 18px;
   line-height: 1.65;
 }
 
 /* Optional: card-like hover if you wrap each post (see HTML tweak below) */
 #micro-blog .micro-post {
   padding: 2px;
-  margin-bottom: 4px;
+  margin-bottom: 20px;
   margin-top: 4px;
   border: solid rgb(171, 68, 255) 1px;
   border-left: dotted red 4px;
+  background-color: rgba(0, 0, 0, 0.904);
 }
 
 .micro-blog-content > a {
