@@ -9,77 +9,29 @@
 
 /* Date header */
 #micro-blog .micro-blog-header {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-style: italic; /* keep your vibe */
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  color: var(--muted);
-  text-transform: uppercase;
-  opacity: 0.95;
-  user-select: none;
-}
-
-/* Glowy dot before the date */
-#micro-blog .micro-blog-header::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, var(--secondary), var(--cyan));
-  box-shadow: 0 0 10px var(--secondary), 0 0 12px var(--cyan);
+  margin: 10px;
 }
 
 /* Post content */
 #micro-blog .micro-blog-content {
-  margin: 0.4rem 0 1rem;
+  margin: 10px;
   font-size: 1rem;
   line-height: 1.65;
-  color: var(--text);
-}
-
-/* Add subtle emphasis options */
-#micro-blog .micro-blog-content em {
-  color: var(--muted);
-}
-#micro-blog .micro-blog-content strong {
-  text-shadow: 0 0 6px var(--secondary-glow-35);
-}
-
-/* Links/hashtags feel */
-#micro-blog .micro-blog-content a {
-  color: var(--cyan);
-  text-decoration: none;
-  border-bottom: 1px dashed var(--line-06);
-}
-#micro-blog .micro-blog-content a:hover {
-  color: var(--highlight);
-  text-shadow: var(--glow-soft);
-  border-bottom-color: transparent;
-}
-
-/* Pretty divider and hide the last one */
-#micro-blog hr {
-  border: 0;
-  height: 1px;
-  margin: 0.25rem 0 1rem;
-  background: linear-gradient(90deg, transparent, var(--line-06), transparent);
-}
-#micro-blog .micro-blog-instance hr:last-child {
-  display: none;
 }
 
 /* Optional: card-like hover if you wrap each post (see HTML tweak below) */
 #micro-blog .micro-post {
-  border-left: 3px solid transparent;
-  border-radius: 10px;
-  padding: 0.4rem 0.4rem 0.6rem;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  padding: 2px;
+  margin-bottom: 4px;
+  margin-top: 4px;
+  border: solid rgb(171, 68, 255) 1px;
+  border-left: dotted red 4px;
 }
+
+.micro-blog-content > a {
+  color: rgb(221, 145, 4);
+}
+
 #micro-blog .micro-post:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: var(--secondary);
-  transform: translateY(-1px);
+  border-left: dotted rgb(0, 255, 98) 4px;
 }
