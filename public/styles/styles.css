@@ -9,6 +9,9 @@ body {
   line-height: 1.6;
   color: white;
   background-color: black;
+  background-image: url("../images/gif.gif");
+  background-attachment: fixed;
+  background-size: fill;
   font-family: "Roboto", sans-serif;
 }
 
@@ -157,6 +160,7 @@ main {
 .section {
   padding: 20px;
   margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.904);
 }
 
 .intro-container {
