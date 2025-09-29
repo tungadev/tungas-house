@@ -12,7 +12,6 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles/piano_test.css" />
     <link rel="stylesheet" href="styles/spark.css" />
     <link rel="stylesheet" href="styles/guest-book.css" />
     <link rel="stylesheet" href="styles/guest-record.css" />
@@ -23,15 +22,6 @@
 
 <body class="theme-test">
     <header>
-        <div class="header-nav">
-            <nav>
-                <a href="songs.html">Songs</a>
-                <a href="stories.html">Stories</a>
-                <a href="#blogs-section">Blog</a>
-                <a href="#dev-section">Dev stuff</a>
-                <a href="#friend-section">Friends</a>
-            </nav>
-        </div>
         <div class="header-bio">
             <div class="neon red">Feelin' ali<span class="flicker">v</span><span class="letter-e">e</span></div>
             <!-- <button id="theme-toggle" aria-label="Toggle theme" title="Change theme">✦</button> -->
@@ -39,179 +29,25 @@
     </header>
 
     <div class="user-sandbox">
-        <div class="intro-container">
-            <p>Happy days, everyone. I'm Tunga, and I love music, story telling, and coding. Thanks for stopping by.
-                <br />
-                <br />
-                I'm currently a programmer, hope to stay that way, but before I was an avid, self-taught musician and
-                passionate about
-                telling stories through visual and written media. This is my personal site to explore some of my old
-                hobbies. Please enjoy, and if you have stories, music, or open source projects you like, please email me
-                and I can get them added with your username attached! tungadev@protonmail.com
-            </p>
-        </div>
-        <div class="piano-container">
-            <ul class="piano-keys-list">
-                <li class="piano-keys white-key" data-key="F3"></li>
-                <li class="piano-keys black-key" data-key="Gb3"></li>
-                <li class="piano-keys white-key" data-key="G3"></li>
-                <li class="piano-keys black-key" data-key="Ab3"></li>
-                <li class="piano-keys white-key" data-key="A3"></li>
-                <li class="piano-keys black-key" data-key="Bb3"></li>
-                <li class="piano-keys white-key" data-key="B3"></li>
-                <li class="piano-keys white-key" data-key="C4"></li>
-                <li class="piano-keys black-key" data-key="Db4"></li>
-                <li class="piano-keys white-key" data-key="D4"></li>
-                <li class="piano-keys black-key" data-key="Eb4"></li>
-                <li class="piano-keys white-key" data-key="E4"></li>
-                <li class="piano-keys white-key" data-key="F4"></li>
-                <li class="piano-keys black-key" data-key="Gb4"></li>
-                <li class="piano-keys white-key" data-key="G4"></li>
-                <li class="piano-keys black-key" data-key="Ab4"></li>
-                <li class="piano-keys white-key" data-key="A4"></li>
-                <li class="piano-keys black-key" data-key="Bb4"></li>
-                <li class="piano-keys white-key" data-key="B4"></li>
-                <li class="piano-keys white-key" data-key="C5"></li>
-                <li class="piano-keys black-key" data-key="Db5"></li>
-                <li class="piano-keys white-key" data-key="D5"></li>
-                <li class="piano-keys black-key" data-key="Eb5"></li>
-                <li class="piano-keys white-key" data-key="E5"></li>
-            </ul>
-        </div>
-        <section class="section" id="guestbook-jams">
-            <div class="row">
-                <button id="rec">Record</button>
-                <button id="stop">Stop</button>
-                <button id="play">Play</button>
-                <button id="save">Save</button>
-
-            </div>
-            <ul id="jam-list" class="jam-list"></ul>
-        </section>
-
         <div id="viz" aria-hidden="true"></div>
-        <section id="saved-songs" class="section">
-            <h2>Your Saved Songs</h2>
-            <div id="songs-list" aria-live="polite"></div>
-        </section>
-    </div>
-    <div class="container-header">
-        <h2>Site Content</h2>
     </div>
     <div class="container">
-        <div class="column">
-            <h2 class="column-item-header">Microblog</h2>
-            <div class="column-item" id="micro-blog">
-                <!-- micro blog post  -->
-                <div class="micro-post">
-                    <div class="micro-blog-header">
-                        2:37 pm September 23, 2025
-                    </div>
-                    <div class="micro-blog-content">
-                        Might write a blog post about the weight of responsibility and how to live along side it (not
-                        that I'm an expert in the subject by any means). I've always been a hard worker but bearing
-                        responsibility long term isn't something you can just brute force and knock out with elbow
-                        grease. I'm learning that it's just kind of something you have to learn to live with once you
-                        reach a certain point in your life if you're fortunate enough. I can tell you that it definitely
-                        isn't going away anytime soon, in fact it looks like it'll be getting heavier in the near
-                        future, which I've been actually begging for but I definitely need to be ready for it
-                    </div>
-                </div>
-                <!-- micro blog post  -->
-                <div class="micro-post">
-                    <div class="micro-blog-header">
-                        2:12 pm September 22, 2025
-                    </div>
-                    <div class="micro-blog-content">
-                        Feeling both out of sorts and in sorts. Optimistic for the future but incredibly difficult to
-                        fight through the present. Here's a heart ❤️
-                    </div>
-                </div>
-                <!-- micro blog post  -->
-                <div class="micro-post">
-                    <div class="micro-blog-header">
-                        8:58 pm September 16, 2025
-                    </div>
-                    <div class="micro-blog-content">
-                        Got a github action set up that pushes files in a repo up to this site. Link to the action
-                        template: <a href="https://github.com/marketplace/actions/deploy-to-neocities">Link</a>
-                    </div>
-                </div>
-                <!-- micro blog post  -->
-                <div class="micro-post">
-                    <div class="micro-blog-header">
-                        11:54 pm September 12, 2025
-                    </div>
-                    <div class="micro-blog-content">
-                        Considering a redesign of this site, and also considering posting more music. Also
-                        super hungry.
-                        Might make it a weekend goal to post a messy lil .mp3
-                    </div>
-                </div>
-                <!-- micro blog post  -->
-                <div class="micro-post">
-                    <div class="micro-blog-header">
-                        6:57 pm September 10, 2025
-                    </div>
-                    <div class="micro-blog-content">
-                        Finding myself a little bored actually, which is an improvement. I don't
-                        particularly want to do
-                        much of anything, and I don't currently have anything forced upon me. Plenty I could
-                        do and
-                        should do, but kind of just vibing. I'll probably clean the house in a bit.
-                    </div>
-                </div>
-                <!-- micro blog post  -->
-                <div class="micro-post">
-                    <div class="micro-blog-header">
-                        8:30 pm September 6, 2025
-                    </div>
-                    <div class="micro-blog-content">
-                        Fun creative day. Got my recording studio set back up after the move, worked on the
-                        ARG, and
-                        went around town and tried a new bakery. Loving life.
-                    </div>
-                </div>
-                <!-- micro blog post  -->
-                <div class="micro-post">
-                    <div class="micro-blog-header">
-                        2:46 pm September 1, 2025
-                    </div>
-                    <div class="micro-blog-content">
-                        I'm feeling a lot better this afternoon about the pups. I think I'm coping with the
-                        reality a
-                        touch better. Also, starting another website that will be story based. Might tie it
-                        into short
-                        stories posted here? Who knows. Figuring out scope now. Fun stuff :)
-                    </div>
-                </div>
-                <!-- micro blog post  -->
-                <div class="micro-post">
-                    <div class="micro-blog-header">
-                        10:52 pm August 31, 2025
-                    </div>
-                    <div class="micro-blog-content">
-                        Thinking about these pups. Surrendering the puppies to the shelter on Tuesday.
-                        Something about
-                        it being my last day with them made my heart break earlier. Tough night.
-                    </div>
-                </div>
-                <!-- micro blog post  -->
-                <div class="micro-post">
-                    <div class="micro-blog-header">
-                        12:03 pm August 31, 2025
-                    </div>
-                    <div class="micro-blog-content">
-                        Fostering puppies right now and it's time to get them up from a nap. They're so
-                        stinking cute
-                        I'm having trouble not keeping one (not really they're terrors but I love them so
-                        much) ❤️
-                    </div>
-                </div>
-                <hr>
-            </div>
-        </div>
+
         <main>
+            <div class="intro-container">
+                <p>Happy days, everyone! ❤️ I'm Tunga, and I
+                    love music, story telling, and coding. Thanks for stopping by.
+                    <br />
+                    <br />
+                    I'm currently a programmer, hope to stay that way, but before I was an avid, self-taught musician
+                    and
+                    passionate about
+                    telling stories through visual and written media. This is my personal site to explore some of my old
+                    hobbies. Please enjoy, and if you have stories, music, or open source projects you like, please
+                    email me
+                    and I can get them added with your username attached! tungadev@protonmail.com
+                </p>
+            </div>
             <!-- <div class="section" id="stories-section">
                 <h2>
                     Stories
@@ -274,26 +110,158 @@
             </section>
         </main>
         <div class="column">
+            <div class="column">
+                <div class="column-item" id="website-links">
+                    <a href="songs.html">☆ Songs</a>
+                    <a href="stories.html">☆ Stories</a>
+                    <a href="#blogs-section">☆ Blog</a>
+                    <a href="#dev-section">☆ Dev stuff</a>
+                    <a href="#friend-section">☆ Cool sites</a>
+                </div>
+                <h2 class="column-item-header">Microblog</h2>
+                <div class="column-item" id="micro-blog">
+                    <!-- micro blog post  -->
+                    <div class="micro-post">
+                        <div class="micro-blog-header">
+                            2:37 pm September 23, 2025
+                        </div>
+                        <div class="micro-blog-content">
+                            Might write a blog post about the weight of responsibility and how to live along side it
+                            (not
+                            that I'm an expert in the subject by any means). I've always been a hard worker but
+                            bearing
+                            responsibility long term isn't something you can just brute force and knock out with
+                            elbow
+                            grease. I'm learning that it's just kind of something you have to learn to live with
+                            once
+                            you
+                            reach a certain point in your life if you're fortunate enough. I can tell you that it
+                            definitely
+                            isn't going away anytime soon, in fact it looks like it'll be getting heavier in the
+                            near
+                            future, which I've been actually begging for but I definitely need to be ready for it
+                        </div>
+                    </div>
+                    <!-- micro blog post  -->
+                    <div class="micro-post">
+                        <div class="micro-blog-header">
+                            2:12 pm September 22, 2025
+                        </div>
+                        <div class="micro-blog-content">
+                            Feeling both out of sorts and in sorts. Optimistic for the future but incredibly
+                            difficult
+                            to
+                            fight through the present. Here's a heart ❤️
+                        </div>
+                    </div>
+                    <!-- micro blog post  -->
+                    <div class="micro-post">
+                        <div class="micro-blog-header">
+                            8:58 pm September 16, 2025
+                        </div>
+                        <div class="micro-blog-content">
+                            Got a github action set up that pushes files in a repo up to this site. Link to the
+                            action
+                            template: <a href="https://github.com/marketplace/actions/deploy-to-neocities">Link</a>
+                        </div>
+                    </div>
+                    <!-- micro blog post  -->
+                    <div class="micro-post">
+                        <div class="micro-blog-header">
+                            11:54 pm September 12, 2025
+                        </div>
+                        <div class="micro-blog-content">
+                            Considering a redesign of this site, and also considering posting more music. Also
+                            super hungry.
+                            Might make it a weekend goal to post a messy lil .mp3
+                        </div>
+                    </div>
+                    <!-- micro blog post  -->
+                    <div class="micro-post">
+                        <div class="micro-blog-header">
+                            6:57 pm September 10, 2025
+                        </div>
+                        <div class="micro-blog-content">
+                            Finding myself a little bored actually, which is an improvement. I don't
+                            particularly want to do
+                            much of anything, and I don't currently have anything forced upon me. Plenty I could
+                            do and
+                            should do, but kind of just vibing. I'll probably clean the house in a bit.
+                        </div>
+                    </div>
+                    <!-- micro blog post  -->
+                    <div class="micro-post">
+                        <div class="micro-blog-header">
+                            8:30 pm September 6, 2025
+                        </div>
+                        <div class="micro-blog-content">
+                            Fun creative day. Got my recording studio set back up after the move, worked on the
+                            ARG, and
+                            went around town and tried a new bakery. Loving life.
+                        </div>
+                    </div>
+                    <!-- micro blog post  -->
+                    <div class="micro-post">
+                        <div class="micro-blog-header">
+                            2:46 pm September 1, 2025
+                        </div>
+                        <div class="micro-blog-content">
+                            I'm feeling a lot better this afternoon about the pups. I think I'm coping with the
+                            reality a
+                            touch better. Also, starting another website that will be story based. Might tie it
+                            into short
+                            stories posted here? Who knows. Figuring out scope now. Fun stuff :)
+                        </div>
+                    </div>
+                    <!-- micro blog post  -->
+                    <div class="micro-post">
+                        <div class="micro-blog-header">
+                            10:52 pm August 31, 2025
+                        </div>
+                        <div class="micro-blog-content">
+                            Thinking about these pups. Surrendering the puppies to the shelter on Tuesday.
+                            Something about
+                            it being my last day with them made my heart break earlier. Tough night.
+                        </div>
+                    </div>
+                    <!-- micro blog post  -->
+                    <div class="micro-post">
+                        <div class="micro-blog-header">
+                            12:03 pm August 31, 2025
+                        </div>
+                        <div class="micro-blog-content">
+                            Fostering puppies right now and it's time to get them up from a nap. They're so
+                            stinking cute
+                            I'm having trouble not keeping one (not really they're terrors but I love them so
+                            much) ❤️
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
             <h2 class="column-item-header">Page Updates</h2>
             <div class="column-item" id="micro-blog">
                 <div class="micro-post">
                     <div class="micro-blog-header">September 28, 2025</div>
                     <div class="micro-blog-content">
-                        Working on modifying blog post page design to match new web design vibe. Might add a "webmaster"
+                        Working on modifying blog post page design to match new web design vibe. Might add a
+                        "webmaster"
                         page as somewhat of a bio
                     </div>
                 </div>
                 <div class="micro-post">
                     <div class="micro-blog-header">September 28, 2025</div>
                     <div class="micro-blog-content">
-                        Changed home background to match index.html background just because it looks better than a plain
+                        Changed home background to match index.html background just because it looks better than a
+                        plain
                         black background
                     </div>
                 </div>
                 <div class="micro-post">
                     <div class="micro-blog-header">September 28, 2025</div>
                     <div class="micro-blog-content">
-                        Added an "enter website" index page and finished total redesign of home page. Loving it a lot
+                        Added an "enter website" index page and finished total redesign of home page. Loving it a
+                        lot
                         more than the last design. Much more me
                     </div>
                 </div>
@@ -323,8 +291,6 @@
 
     </footer>
 
-    <script src="js/piano.js"></script>
-    <script src="js/key-shortcut.js"></script>
     <script src="js/spark.js"></script>
     <script src="js/guest-record.js"></script>
 </body>

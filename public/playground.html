@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-allow-effects="true">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tunga's House</title>
+    <link rel="icon" type="image/png" href="images/cute-kitty-cat-head-cartoon-element-free-png.png" />
+    <link rel="stylesheet" href="styles/piano_test.css" />
+
+</head>
+
+<body>
+    <div class="piano-container">
+        <ul class="piano-keys-list">
+            <li class="piano-keys white-key" data-key="F3"></li>
+            <li class="piano-keys black-key" data-key="Gb3"></li>
+            <li class="piano-keys white-key" data-key="G3"></li>
+            <li class="piano-keys black-key" data-key="Ab3"></li>
+            <li class="piano-keys white-key" data-key="A3"></li>
+            <li class="piano-keys black-key" data-key="Bb3"></li>
+            <li class="piano-keys white-key" data-key="B3"></li>
+            <li class="piano-keys white-key" data-key="C4"></li>
+            <li class="piano-keys black-key" data-key="Db4"></li>
+            <li class="piano-keys white-key" data-key="D4"></li>
+            <li class="piano-keys black-key" data-key="Eb4"></li>
+            <li class="piano-keys white-key" data-key="E4"></li>
+            <li class="piano-keys white-key" data-key="F4"></li>
+            <li class="piano-keys black-key" data-key="Gb4"></li>
+            <li class="piano-keys white-key" data-key="G4"></li>
+            <li class="piano-keys black-key" data-key="Ab4"></li>
+            <li class="piano-keys white-key" data-key="A4"></li>
+            <li class="piano-keys black-key" data-key="Bb4"></li>
+            <li class="piano-keys white-key" data-key="B4"></li>
+            <li class="piano-keys white-key" data-key="C5"></li>
+            <li class="piano-keys black-key" data-key="Db5"></li>
+            <li class="piano-keys white-key" data-key="D5"></li>
+            <li class="piano-keys black-key" data-key="Eb5"></li>
+            <li class="piano-keys white-key" data-key="E5"></li>
+        </ul>
+    </div>
+    <section class="section" id="guestbook-jams">
+        <div class="row">
+            <button id="rec">Record</button>
+            <button id="stop">Stop</button>
+            <button id="play">Play</button>
+            <button id="save">Save</button>
+
+        </div>
+        <ul id="jam-list" class="jam-list"></ul>
+    </section>
+    <section id="saved-songs" class="section">
+        <h2>Your Saved Songs</h2>
+        <div id="songs-list" aria-live="polite"></div>
+    </section>
+    <script src="js/piano.js"></script>
+    <script src="js/key-shortcut.js"></script>
+</body>
+
+</html>

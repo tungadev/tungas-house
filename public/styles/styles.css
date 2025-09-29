@@ -120,6 +120,23 @@ header {
   text-align: center;
 }
 
+#website-links {
+  display: flex;
+  border: 2px solid rgb(47, 172, 255);
+  justify-content: center;
+}
+
+#website-links > a {
+  text-align: center;
+  margin: 0 20px 0 20px;
+  color: white;
+  text-decoration: none;
+}
+
+#website-links > a:hover {
+  color: rgb(83, 192, 255);
+}
+
 #micro-blog,
 #updates {
   height: 600px;
@@ -167,9 +184,14 @@ main {
   border: solid rgb(126, 0, 105) 2px;
 }
 
+#blogs-section {
+  margin-top: 50px;
+}
+
 #blogs-section,
 #dev-section,
 #friend-section {
+  margin-top: 20px;
   border: solid red 2px;
 }
 
