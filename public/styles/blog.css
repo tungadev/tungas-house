@@ -88,6 +88,11 @@ main {
 
 }
 
+main > a {
+  color: rgb(145, 196, 253);
+  text-decoration: none;
+}
+
 footer {
   max-width: var(--maxw);
   margin: 2rem auto 3rem;
