@@ -33,9 +33,9 @@ header {
   position: relative;
   padding: 1rem 0 2rem;
   color: white;
-  background-color: rgba(113, 0, 141, 0.24);
+  background-color: rgba(113, 0, 141, 0.219);
   /* add background shadow */
-  box-shadow: 0 4px 30px rgba(255, 0, 0, 0.384);
+  box-shadow: 0 4px 30px rgba(255, 0, 0, 0.575);
   font-family: "Roboto", sans-serif;
   z-index: 2;
 
