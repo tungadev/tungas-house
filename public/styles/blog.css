@@ -33,9 +33,9 @@ header {
   position: relative;
   padding: 1rem 0 2rem;
   color: white;
-  background-color: rgba(0, 0, 0, 0.822);
+  background-color: rgba(113, 0, 141, 0.24);
   /* add background shadow */
-  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.479);
+  box-shadow: 0 4px 30px rgba(255, 0, 0, 0.384);
   font-family: "Roboto", sans-serif;
   z-index: 2;
 
@@ -80,7 +80,7 @@ main {
     flex: 1; /* pushes footer down */
 
   max-width: 850px;
-  margin: 5px auto;
+  margin: 25px auto;
   padding: 80px 200px;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
