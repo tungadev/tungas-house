@@ -20,36 +20,6 @@ header {
   border-bottom: 1px solid var(--line-06);
 }
 
-.header-nav {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  font-size: 18px;
-  text-align: center;
-  font-family: "Bitcount Prop Single Ink", system-ui;
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0, "SZP1" 0,
-    "SZP2" 0, "XPN1" 0, "XPN2" 0, "YPN1" 0, "YPN2" 0;
-}
-
-.header-nav nav {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.header-nav a {
-  position: relative;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  transition: color 0.2s ease, transform 0.2s ease;
-}
-
 .header-bio {
   max-width: var(--maxw);
   margin: 60px auto 0;
@@ -67,9 +37,6 @@ header {
   font-family: "Bitcount Prop Single Ink", system-ui;
   font-optical-sizing: auto;
   font-size: 100px;
-  font-style: normal;
-  font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0, "SZP1" 0,
-    "SZP2" 0, "XPN1" 0, "XPN2" 0, "YPN1" 0, "YPN2" 0;
 }
 
 .header-bio p {
@@ -128,7 +95,7 @@ header {
 
 #website-links > a {
   text-align: center;
-  margin: 0 20px 0 20px;
+  margin: 0 15px 0 15px;
   color: white;
   text-decoration: none;
 }
