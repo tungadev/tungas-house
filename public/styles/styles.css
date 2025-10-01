@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 
-:root {
-  --maxw: 1000px;
-  --main-maxw: 800px;
-}
-
 body {
   line-height: 1.6;
   color: white;
@@ -13,21 +8,39 @@ body {
   background-attachment: fixed;
   background-size: fill;
   font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.parent-container {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 800px 600px;
+  grid-template-areas: "main-column side-column";
+}
+
+.main-column {
+  padding: 10px;
+  grid-area: "main-column";
+}
+
+.side-column {
+  grid-area: "side-column";
+  padding-top: 50px;
+  margin-left: 10px;
 }
 
 header {
-  padding: 1rem 0 2rem;
   border-bottom: 1px solid var(--line-06);
 }
 
-.header-bio {
-  max-width: var(--maxw);
-  margin: 60px auto 0;
+header {
+  margin: 60px auto 60px auto;
   padding: 0 10px;
   text-align: center;
 }
 
-.header-bio div {
+header div {
   margin: 0 0 10px;
   font-size: 70px;
   font-weight: 800;
@@ -39,40 +52,13 @@ header {
   font-size: 100px;
 }
 
-.header-bio p {
+header p {
   margin: 0;
-  color: var(--muted);
   font-weight: 600;
 }
 
-.user-sandbox {
-  max-width: var(--maxw);
-  margin: 0 auto;
-}
-
-.container-header {
-  text-align: center;
-}
-
-.container {
-  display: flex;
-  flex-direction: row;
-  align-items: top;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.column {
-  flex: 1;
-  padding: 10px;
-  max-width: 700px;
-}
-
 .column-item {
-  flex: 1;
-  padding: 10px;
   min-height: auto;
-  min-width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   overflow: auto;
@@ -90,11 +76,10 @@ header {
 #website-links {
   display: flex;
   border: 2px solid rgb(47, 172, 255);
-  justify-content: center;
+  width: 630px;
 }
 
 #website-links > a {
-  text-align: center;
   margin: 0 15px 0 15px;
   color: white;
   text-decoration: none;
@@ -115,6 +100,7 @@ header {
 
   /* Hide scrollbar for IE/Edge (legacy) */
   -ms-overflow-style: none;
+  max-width: 600px;
 }
 
 /* Hide scrollbar for Chrome, Edge, Safari */
@@ -134,11 +120,11 @@ header {
   margin-bottom: 10px;
 }
 
-main {
+/* main {
   max-width: var(--main-maxw);
   padding: 5px;
   border: solid rgb(179, 45, 119) 2px;
-}
+} */
 
 .intro-container,
 .section {
@@ -198,7 +184,6 @@ main {
 }
 
 footer {
-  max-width: var(--maxw);
   margin: 20px auto 30px;
   padding: 0 10px;
   color: var(--muted);
@@ -207,15 +192,6 @@ footer {
   padding-top: 10px;
 }
 
-.tw-wrap {
-  display: inline-block;
-  position: relative;
-}
-
-#viz {
-  display: grid;
-  grid-template-columns: repeat(32, 1fr);
-}
 .neon {
   position: relative;
   color: #ffffff; /* inner tube “white” */
@@ -323,10 +299,4 @@ footer {
     transform: rotate(180deg) translateY(100px);
     opacity: 0; /* fades out as it “falls” */
   }
-}
-
-#micro-blog {
-  width: 100px;
-  padding: 0px;
-  margin: 0px;
 }
