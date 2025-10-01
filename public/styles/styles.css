@@ -22,6 +22,7 @@ body {
 .main-column {
   padding: 10px;
   grid-area: "main-column";
+  border: solid rgb(179, 45, 119) 2px;
 }
 
 .side-column {
@@ -123,7 +124,6 @@ header p {
 /* main {
   max-width: var(--main-maxw);
   padding: 5px;
-  border: solid rgb(179, 45, 119) 2px;
 } */
 
 .intro-container,
