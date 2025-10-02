@@ -15,7 +15,7 @@ body {
 .parent-container {
   justify-content: center;
   display: grid;
-  grid-template-columns: 800px 600px;
+  grid-template-columns: 800px 500px;
   grid-template-areas: "main-column side-column";
 }
 
@@ -66,6 +66,11 @@ header p {
   scrollbar-width: thin; /* Firefox */
 }
 
+.grid-item {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 /* Chrome / Edge / Safari */
 .column-item-header {
   font-weight: 700;
@@ -74,16 +79,75 @@ header p {
   text-align: center;
 }
 
+.side-column-grid {
+  display: grid;
+  /* border: solid rgb(255, 0, 255) 2px; */
+  grid-template-columns: 140px minmax(0, 1fr); /* left fixed, right fills the rest */
+  grid-template-areas:
+    "website-links test-item"
+    "banner banner"
+    "box-one box-two";
+}
+
+#side-column-grid-one {
+  grid-template-columns: 140px auto; /* left fixed, right fills the rest */
+  grid-template-areas:
+    "website-links test-item"
+    "banner banner"
+    "box-one box-two";
+}
+
+#side-column-grid-two {
+  /* border: solid rgb(255, 0, 255) 2px; */
+  grid-template-columns: auto auto; /* left fixed, right fills the rest */
+  grid-template-areas: "box-one box-two";
+}
+
+#test-item {
+  border: solid red 2px;
+  margin-left: 10px;
+  grid-area: test-item;
+  background-color: rgba(0, 0, 0, 0.904);
+}
+
+#banner {
+  border: solid red 2px;
+  grid-area: banner;
+  background-color: rgba(0, 0, 0, 0.904);
+  height: 75px;
+}
+
+#box-one {
+  border: solid red 2px;
+  grid-area: box-one;
+  background-color: rgba(0, 0, 0, 0.904);
+  height: 50px;
+  margin-right: 2.5px;
+}
+
+#box-two {
+  border: solid red 2px;
+  grid-area: box-two;
+  background-color: rgba(0, 0, 0, 0.904);
+  height: 50px;
+  margin-left: 2.5px;
+}
+
 #website-links {
   display: flex;
-  border: 2px solid rgb(47, 172, 255);
-  width: 630px;
+  width: 140px;
+  border: solid rgb(47, 172, 255) 2px;
+  flex-direction: column;
+  grid-area: website-links;
+  background-color: rgba(0, 0, 0, 0.904);
+  text-align: left;
 }
 
 #website-links > a {
-  margin: 0 15px 0 15px;
+  margin: 5px 0 5px 0;
   color: white;
   text-decoration: none;
+  padding-left: 5px;
 }
 
 #website-links > a:hover {
