@@ -1,0 +1,15 @@
+#box-one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* status colors */
+.status-online {
+  background-color: #28a745; /* green */
+}
+
+.status-offline {
+  background-color: #dc3545; /* red */
+  box-shadow: 0 0 10px rgba(220, 53, 69, 0.6);
+}
