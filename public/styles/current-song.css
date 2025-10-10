@@ -1,0 +1,30 @@
+#banner .now-playing {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#banner .now-playing-image {
+    max-width: 40%;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+#banner .now-playing-text {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+#banner .now-playing-text .title,
+#banner .now-playing-text .artist {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+}
