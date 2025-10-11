@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     document.getElementById('banner').innerHTML = `
       <div class="now-playing">
-        <img src="https://cdn-images.dzcdn.net/images/cover/aad338ea81c77ec24dbaf0c826572371/500x500.jpg" alt="Album art" class="now-playing-image">
+        <img src="https://cdn-images.dzcdn.net/images/cover/aad338ea81c77ec24dbaf0c826572371/500x500.jpg" alt="Album art" class="now-playing-image" />
         <div class="now-playing-text">
           <p class="title">${title}</p>
           <p class="artist">${artist}</p>
