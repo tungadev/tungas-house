@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!r.ok) throw new Error(r.status);
     const { title = '', artist = '', imageUrl = '' } = await r.json();
 
-    console.log({ title, artist, imageUrl });
+    console.log("imageUrl: " + imageUrl);
 
     document.getElementById('banner').innerHTML = `
       <div class="now-playing">
