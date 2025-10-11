@@ -4,14 +4,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (!r.ok) throw new Error(r.status);
     const { title = '', artist = '', imageUrl = '' } = await r.json();
 
-    console.log("imageUrl: " + imageUrl);
-
     document.getElementById('banner').innerHTML = `
       <div class="now-playing">
-        ${imageUrl ? `<img src="${imageUrl}" alt="Album art" class="now-playing-image">` : ''}
+        <img src="${imageUrl}" alt="Album art" class="now-playing-image">
         <div class="now-playing-text">
-          <p class="title">${title || 'Unknown Title'}</p>
-          <p class="artist">${artist || 'Unknown Artist'}</p>
+          <p class="title">${title}</p>
+          <p class="artist">${artist}</p>
         </div>
       </div>`;
   } catch (e) {

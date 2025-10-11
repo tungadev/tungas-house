@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then((data) => {
-      console.log("Response:", data);
-
       // reset classes
       boxOne.className = "status-box";
 
