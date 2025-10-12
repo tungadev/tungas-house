@@ -1,30 +1,76 @@
 #banner .now-playing {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 #banner .now-playing-image {
-    max-width: 40%;
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    flex: 0 0 auto;
+  max-width: 40%;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  flex: 0 0 auto;
 }
 
 #banner .now-playing-text {
-    min-width: 0;
-    flex: 1 1 auto;
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
+/* Title/artist act as overflow-hidden containers */
 #banner .now-playing-text .title,
 #banner .now-playing-text .artist {
-    margin: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    line-height: 1.2;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  position: relative;
+  max-width: 100%;
+}
+
+/* The inner span is what moves */
+#banner .now-playing-text .scroll-inner {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* When overflow detected, animate the inner span */
+#banner .now-playing-text .scroll .scroll-inner {
+  animation: marquee var(--scroll-duration, 12s) linear infinite;
+}
+
+/* Pause on hover (optional) */
+#banner .now-playing-text .scroll:hover .scroll-inner {
+  animation-play-state: paused;
+}
+
+/* Adds a pause at start and end of the loop */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0); /* pause at start */
+  }
+  90% {
+    transform: translateX(calc(-1 * var(--scroll-distance, 0px)));
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--scroll-distance, 0px))); /* pause at end */
+  }
+}
+
+#banner .now-playing-status .status-text {
+  min-width: 130px;
+}
+
+/* Accessibility: respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #banner .now-playing-text .scroll .scroll-inner {
+    animation: none !important;
+  }
 }

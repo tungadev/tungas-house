@@ -115,6 +115,7 @@ header p {
   grid-area: banner;
   background-color: rgba(0, 0, 0, 0.904);
   height: 75px;
+  max-width: 488px;
 }
 
 #box-one {
