@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    const r = await fetch('http://localhost:8080/getCurrentlyListening', {
+    const r = await fetch('https://fantastic-manatee-a1d0c8.netlify.app/.netlify/functions/api/getCurrentlyListening', {
       headers: { Accept: 'application/json' }
     });
 
