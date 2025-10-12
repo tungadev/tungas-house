@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const { title = '', artist = '', imageUrl = '', isCurrentlyListening } = await r.json();
     const statusText = isCurrentlyListening ? 'Listening Now 🟢' : 'Not Currently<br />Playing 🔴';
 
-    // Inject HTML first
     document.getElementById('banner').innerHTML = `
       <div class="now-playing">
         <img src="${imageUrl}" alt="Album art" class="now-playing-image" />
@@ -22,7 +21,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
       </div>`;
 
-    // ✅ Now that the HTML exists, run marquee setup
     applyMarquee();
   } catch (e) {
     document.getElementById('banner').textContent = 'Nothing playing right now.';
@@ -30,7 +28,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 });
 
-// Reuse your existing applyMarquee() function here (exact same code)
 function applyMarquee() {
   const container = document.getElementById('banner');
   if (!container) return;
@@ -40,7 +37,6 @@ function applyMarquee() {
   );
 
   els.forEach(el => {
-    // unwrap previous inner span if re-running
     const text = el.textContent;
     el.innerHTML = `<span class="scroll-inner">${text}</span>`;
 
@@ -60,7 +56,6 @@ function applyMarquee() {
   });
 }
 
-// Keep the resize listener
 let resizeTimer;
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
